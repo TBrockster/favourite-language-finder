@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# this class wraps GraphQL queries into objects
 class GHLangFinderWrapper
-  def wrap_graphql_query(query); end
+  def self.wrap_graphql_query(_query)
+    GHLangFinderWrapper.new
+  end
 end
