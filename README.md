@@ -6,7 +6,7 @@
  - cd favourite-language-finder
  - In a REPL
    - Instatiate new instance of FavLangFinder class (my_fav_lang_finder = FavLangFinder.new)
-   - Call on the find_fav_lang method with an argument of a github username (my_fav_lang_finder('TBrockster'))
+   - Call on the send_graphql_query method with an argument of a github username (my_fav_lang_finder('TBrockster'))
 
 ## My Approach
 
