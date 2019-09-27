@@ -10,7 +10,7 @@ class GraphQLQuerier
   end
 
   def map_response(response = @response)
-    repos = response.data.user.repositories.nodes.map do |repo|
+    response.data.user.repositories.nodes.map do |repo|
       repo
     end
   end

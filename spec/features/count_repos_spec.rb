@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe 'Counting Repos' do
   it 'returns a count of the repos of a given github user' do
     my_graphql_querier = GraphQLQuerier.new
