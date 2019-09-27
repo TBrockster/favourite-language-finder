@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'graphql_querier'
 
 describe 'Mapping Response to Array of Repo Objects' do
