@@ -12,6 +12,7 @@ class FavLangFinderApp < Sinatra::Base
   end
 
   get '/result' do
+    @result = params[:username]
     erb(:result)
   end
 end
