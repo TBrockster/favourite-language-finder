@@ -1,5 +1,14 @@
 <h1>These should look familiar ;)</h1>
 
+<table>
+  <tr>
+    <th>Repository Name</th>
+    <th>Dominant Language</th>
+  </tr>
 <% @repos.each do |repo| %>
-  <%= repo.name %>
+  <tr>
+    <td><%= repo.name %></td>
+    <td><%= repo.languages %></td>
+  </tr>
 <% end %>
+</table>
