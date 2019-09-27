@@ -8,6 +8,7 @@
    - bundle install
    - rackup
  - visit http://localhost:9292/
+ - Then enter a valid GitHub username, and click 'Find Favourite Language!'
 
 ## My Approach
 
