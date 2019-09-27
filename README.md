@@ -12,4 +12,4 @@
 
 I spent quite a lot of time deciding whether to use v3 or v4 of GitHubs api. I eventually decided on v4, because I have been wanting to try out GraphQL for a while, and I think it will make this app less complex. 
 
-I started out with the usual file structure and initializing commands. I then began to TDD the FavLangFinder class.
+I decided to use a pair of classes to make GraphQL queries, and to wrap the query into an object, so a 3rd class could easily handle the information.
