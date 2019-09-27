@@ -13,3 +13,7 @@
 I spent quite a lot of time deciding whether to use v3 or v4 of GitHubs api. I eventually decided on v4, because I have been wanting to try out GraphQL for a while, and I think it will make this app less complex, and easier to change. 
 
 I decided to create the logic model before choosing whether to make this a Command Line or Web App. I decided on a class to send a query, and another to format the response. This could then be called on by a controller, which should keep the app flexible.
+
+## Obstacles
+
+I struggled to test the methods that deal with the GraphQL response, and so I am relying quite heavily on feature tests, using a live api call to my own GitHub profile, which will change as I continue to use it.

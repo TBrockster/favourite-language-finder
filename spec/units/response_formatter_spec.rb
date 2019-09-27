@@ -26,4 +26,11 @@ describe ResponseFormatter do
       response_formatter.count_dominant_language
     end
   end
+
+  describe '#list_repos' do
+    it 'returns a list of repo names, with their dominant language' do
+      expect(fake_response).to receive(:each)
+      response_formatter.list_repos
+    end
+  end
 end

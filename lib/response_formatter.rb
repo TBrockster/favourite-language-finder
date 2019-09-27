@@ -10,13 +10,23 @@ class ResponseFormatter
     @response.count
   end
 
+  def list_repos
+    repos = {}
+    @response.each do |response|
+      next if response.languages.total_count.zero?
+
+      repos[response.name.to_sym] = determine_winner(response)
+    end
+    repos
+  end
+
   def sum_total_bytes
     total_bytes = Hash.new(0)
     @response.each do |response|
       next if response.languages.total_count.zero?
 
       response.languages.edges.each do |language|
-        total_bytes[language.node.name] += language.size
+        total_bytes[language.node.name.to_sym] += language.size
       end
     end
     find_highest_value(total_bytes)
@@ -27,7 +37,7 @@ class ResponseFormatter
     @response.each do |response|
       next if response.languages.total_count.zero?
 
-      total_dominant_repos[determine_winner(response)] += 1
+      total_dominant_repos[determine_winner(response).to_sym] += 1
     end
     find_highest_value(total_dominant_repos)
   end
@@ -39,7 +49,10 @@ def determine_winner(response)
   winner_size = 0
   winner_name = ''
   response.languages.edges.each do |language|
-    winner_name = language.node.name if language.size > winner_size
+    if language.size > winner_size
+      winner_name = language.node.name
+      winner_size = language.size
+    end
   end
   winner_name
 end
