@@ -19,7 +19,7 @@ class ResponseFormatter
         total_bytes[language.node.name] += language.size
       end
     end
-    total_bytes
+    find_highest_value(total_bytes)
   end
 
   def count_dominant_language
@@ -29,7 +29,7 @@ class ResponseFormatter
 
       total_dominant_repos[determine_winner(response)] += 1
     end
-    total_dominant_repos
+    find_highest_value(total_dominant_repos)
   end
 end
 
@@ -42,4 +42,8 @@ def determine_winner(response)
     winner_name = language.node.name if language.size > winner_size
   end
   winner_name
+end
+
+def find_highest_value(hash)
+  hash.each { |k, v| return k if v == hash.values.max }
 end
