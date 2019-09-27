@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'gh_lang_finder_wrapper'
 
 describe GHLangFinderWrapper do
