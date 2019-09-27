@@ -1,5 +1,4 @@
-<h1>These should look familiar ;)</h1>
-
+<h1>These are the repos we could find</h1>
 <table>
   <tr>
     <th>Repository Name</th>
@@ -8,7 +7,7 @@
 <% @repos.each do |repo| %>
   <tr>
     <td><%= repo.name %></td>
-    <td><%= repo.languages %></td>
+    <td><%= repo.dominant_language %></td>
   </tr>
 <% end %>
 </table>

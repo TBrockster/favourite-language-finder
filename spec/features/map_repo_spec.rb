@@ -8,6 +8,6 @@ describe 'Mapping Response to Array of Repo Objects' do
     graphql_querier.send_graphql_query('TBrockster')
     expect(graphql_querier.map_response_to_repo).to be_an Array
     expect(graphql_querier.map_response_to_repo[0].name).to eq 'hello-world'
-    expect(graphql_querier.map_response_to_repo[0].languages).to eq({})
+    expect(graphql_querier.map_response_to_repo[0].dominant_language).to eq('N/A')
   end
 end
