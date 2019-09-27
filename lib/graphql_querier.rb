@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'gh_lang_finder_module.rb'
+require_relative './gh_lang_finder_module'
 
 # this class uses a graphql library to send a query to github.
 class GraphQLQuerier
