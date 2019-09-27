@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 feature 'Viewing result' do
   scenario 'Can see repo names' do
     enter_name

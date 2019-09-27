@@ -4,7 +4,7 @@ require 'repo'
 
 describe Repo do
   before(:each) do
-    @languages = { :Ruby => 1, :JavaScript => 2 }
+    @languages = { Ruby: 1, JavaScript: 2 }
   end
   it 'stores a name attribute, and makes it readable' do
     expect(Repo.new(name: 'Fred', languages: @languages).name).to eq 'Fred'

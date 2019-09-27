@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 def enter_name
   visit '/'
   fill_in 'username', with: 'TBrockster'
