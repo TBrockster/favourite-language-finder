@@ -1,3 +1,5 @@
-<h1>This will be the result page!</h1>
+<h1>These should look familiar ;)</h1>
 
-<%= @result %>
+<% @repos.each do |repo| %>
+  <%= repo.name %>
+<% end %>

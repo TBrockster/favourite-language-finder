@@ -12,7 +12,9 @@ class FavLangFinderApp < Sinatra::Base
   end
 
   get '/result' do
-    @result = params[:username]
+    graphql_queirer = GraphQLQuerier.new
+    graphql_queirer.send_graphql_query(params[:username])
+    @repos = graphql_queirer.map_response_to_repo
     erb(:result)
   end
 end
