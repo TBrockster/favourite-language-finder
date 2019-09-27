@@ -5,6 +5,5 @@ describe 'integration test' do
     my_graphql_querier = GraphQLQuerier.new
     my_graphql_querier.send_graphql_query('TBrockster')
     expect(my_graphql_querier.map_response).to be_an Array
-    expect(my_graphql_querier.map_response).to include?('playing-with-git')
  end
 end

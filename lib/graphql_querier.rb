@@ -9,7 +9,9 @@ class GraphQLQuerier
     @response = graphql_library.query(GHLangBreakdown, variables: { login: username })
   end
 
-  def map_response
-    
+  def map_response(response = @response)
+    repos = response.data.user.repositories.nodes.map do |repo|
+      repo
+    end
   end
 end
