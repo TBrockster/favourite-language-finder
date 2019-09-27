@@ -27,19 +27,19 @@ class ResponseFormatter
     @response.each do |response|
       next if response.languages.total_count.zero?
 
-      if response.languages.edges.count == 1
-        response.languages.edges.each do |language|
-          total_dominant_repos[language.node.name] += 1
-        end
-      else
-        winner_size = 0
-        winner_name = ''
-        response.languages.edges.each do |language|
-          winner_name = language.node.name if language.size > winner_size
-        end
-        total_dominant_repos[winner_name] += 1
-      end
+      total_dominant_repos[determine_winner(response)] += 1
     end
-    p total_dominant_repos
+    total_dominant_repos
   end
+end
+
+private
+
+def determine_winner(response)
+  winner_size = 0
+  winner_name = ''
+  response.languages.edges.each do |language|
+    winner_name = language.node.name if language.size > winner_size
+  end
+  winner_name
 end
