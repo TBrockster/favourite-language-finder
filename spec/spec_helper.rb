@@ -1,4 +1,4 @@
-require_relative './features/feature_helper'
+require_relative './feature_helper'
 
 # frozen_string_literal: true
 

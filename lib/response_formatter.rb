@@ -19,6 +19,6 @@ class ResponseFormatter
         total_bytes[language.node.name] += language.size
       end
     end
-    p total_bytes
+    total_bytes
   end
 end
