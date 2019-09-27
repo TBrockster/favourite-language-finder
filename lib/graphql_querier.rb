@@ -6,12 +6,17 @@ require 'gh_lang_finder_module.rb'
 class GraphQLQuerier
   include GHLangFinder
   def send_graphql_query(username, graphql_library: GHLangFinder::Client)
-    @response = graphql_library.query(GHLangBreakdown, variables: { login: username })
+    @response = graphql_library.query(GHLangBreakdown,
+                                      variables: { login: username })
   end
 
-  def map_response(response = @response)
+  def map_response_to_repo(response = @response)
     response.data.user.repositories.nodes.map do |repo|
-      repo
+      languages = Hash.new(0)
+      repo.languages.edges.each do |language|
+        languages[language.node.name.to_sym] += language.size
+      end
+      Repo.new(name: repo.name, languages: languages)
     end
   end
 end

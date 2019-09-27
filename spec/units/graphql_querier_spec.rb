@@ -14,10 +14,11 @@ describe GraphQLQuerier do
     end
   end
 
-  describe '#map_response' do
-    it 'maps over the response' do
+  describe '#map_response_to_repo' do
+    xit 'maps over the response' do
+      # not isolated, testing with feature test instead.
       graphql_querier.send_graphql_query('TBrockster')
-      expect(graphql_querier.map_response).to be_an Array
+      expect(graphql_querier.map_response_to_repo).to be_an Array
     end
   end
 end
