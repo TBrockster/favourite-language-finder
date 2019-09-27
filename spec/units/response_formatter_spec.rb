@@ -19,4 +19,11 @@ describe ResponseFormatter do
       response_formatter.sum_total_bytes
     end
   end
+
+  describe '#count_dominant_language' do
+    it 'returns a count for how many repos each language is dominant in' do
+      expect(fake_response).to receive(:each)
+      response_formatter.count_dominant_language
+    end
+  end
 end
