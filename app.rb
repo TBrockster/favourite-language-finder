@@ -10,4 +10,8 @@ class FavLangFinderApp < Sinatra::Base
   get '/' do
     erb(:index)
   end
+
+  get '/result' do
+    erb(:result)
+  end
 end
