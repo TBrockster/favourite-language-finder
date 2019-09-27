@@ -17,6 +17,8 @@ I decided to create the logic model before choosing whether to make this a Comma
 
 I then decided that the code would be much cleaner, more readable and changeable if I mapped the response onto repo objects, containing the name, and a hash of languages, instead of simply working through the response with methods each time. However, this did mean a rather large change midway through the project, but I think it is worth doing since it makes passing new information to the other side of the application much easier.
 
+I chose to use Sinatra as a framework, as it is very lightweight, and I think that suits this app.
+
 ## Obstacles
 
 I struggled to test the methods that deal with the GraphQL response, and so I am relying on feature tests, using a live API call to my own GitHub profile, which will change as I continue to use it.
