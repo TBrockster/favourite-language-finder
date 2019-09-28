@@ -19,6 +19,8 @@ class GraphQLQuerier
     end
   end
 
+  private
+
   def create_language_hash(repo)
     languages = Hash.new(0)
     repo.languages.edges.each do |language|
