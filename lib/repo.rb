@@ -26,6 +26,7 @@ class Repo
         dominant_language[language] += bytes
       end
     end
+    dominant_language['N/A'] = 0
     find_highest_value(dominant_language)
   end
 
