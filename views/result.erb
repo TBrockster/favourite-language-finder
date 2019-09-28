@@ -1,4 +1,4 @@
-<h1>Your favourite language by repo count is: <%= @language_by_repos %> </h1>
+<h1>Your favourite language by repo count is: <% @language_by_repos.each do |language| %> <%= language.to_s %> <% end %> </h1>
 
 <h2>These are the repos we could find</h2>
 <table>

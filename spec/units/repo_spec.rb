@@ -6,6 +6,7 @@ describe Repo do
   before(:each) do
     @languages = { Ruby: 1, JavaScript: 2 }
     @other_languages = { Ruby: 10, JavaScript: 5 }
+    @third_languages = { JavaScript: 1, Ruby: 2 }
   end
   it 'stores a name attribute, and makes it readable' do
     expect(Repo.new(name: 'Fred', languages: @languages).name).to eq 'Fred'
@@ -15,7 +16,12 @@ describe Repo do
       repos = [Repo.new(name: 'Fred', languages: @languages),
                Repo.new(name: 'Fred', languages: @languages),
                Repo.new(name: 'Fred', languages: @other_languages)]
-      expect(Repo.favourite_by_repos(repos)).to eq :JavaScript
+      expect(Repo.favourite_by_repos(repos)[0]).to eq :JavaScript
+    end
+    it 'returns both languages with a tie' do
+      repos = [Repo.new(name: 'Fred', languages: @languages),
+               Repo.new(name: 'Fred', languages: @third_languages)]
+      expect(Repo.favourite_by_repos(repos)).to eq [:JavaScript, :Ruby]
     end
   end
   describe '#dominant_language' do

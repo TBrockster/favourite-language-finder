@@ -18,7 +18,9 @@ class Repo
   end
 
   def self.find_highest_value(hash)
-    hash.each { |k, v| return k if v == hash.values.max }
+    highest_value = []
+    hash.each { |k, v| highest_value << k if v == hash.values.max }
+    highest_value
   end
 
   private
