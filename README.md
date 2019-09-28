@@ -20,6 +20,8 @@ I then decided that the code would be much cleaner, more readable and changeable
 
 I chose to use Sinatra as a framework, as it is very lightweight, and I think that suits this app.
 
+After setting up the basic framework, I decided to add links to the repos, to see how simple it is to change the code when using GraphQL and object mapping.
+
 ## Obstacles
 
 I struggled to test the methods that deal with the GraphQL response, and so I am relying on feature tests, using a live API call to my own GitHub profile, which will change as I continue to use it.
@@ -28,7 +30,7 @@ I also went back and forth on the decision to map the response to repo objects, 
 
 ## To Do
  - Fix pending tests
- 
+
  - Add links to repos
  - Style
  - ???
