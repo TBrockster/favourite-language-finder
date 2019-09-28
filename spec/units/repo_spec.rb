@@ -22,7 +22,7 @@ describe Repo do
     it 'returns both languages with a tie' do
       repos = [Repo.new(name: 'Fred', languages: @languages),
                Repo.new(name: 'Fred', languages: @third_languages)]
-      expect(Repo.favourite_by_repos(repos)).to eq [:JavaScript, :Ruby]
+      expect(Repo.favourite_by_repos(repos)).to eq %i[JavaScript Ruby]
     end
   end
 
