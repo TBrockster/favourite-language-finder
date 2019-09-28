@@ -25,3 +25,12 @@ I chose to use Sinatra as a framework, as it is very lightweight, and I think th
 I struggled to test the methods that deal with the GraphQL response, and so I am relying on feature tests, using a live API call to my own GitHub profile, which will change as I continue to use it.
 
 I also went back and forth on the decision to map the response to repo objects, which I should have planned more at the beginning.
+
+## To Do
+
+ - Test for tie in favourite_by_repos
+ - Test and implement favourite by bytes
+ - Add links to repos
+ - Style
+ - ???
+ - Submit
