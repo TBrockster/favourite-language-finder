@@ -30,6 +30,7 @@ I also went back and forth on the decision to map the response to repo objects, 
 
  - Test for tie in favourite_by_repos
  - Test and implement favourite by bytes
+ - Check for invalid GitHub usernames
  - Add links to repos
  - Style
  - ???
