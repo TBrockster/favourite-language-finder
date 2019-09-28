@@ -6,5 +6,6 @@ feature 'Viewing result' do
     expect(page).to have_content('hello-world')
     expect(page).to have_content('JavaScript')
     expect(page).not_to have_content("You're seeing this error because you have enabled the show_exceptions setting.")
+    expect(page).to have_content('Your favourite language by repo count is: Ruby')
   end
 end

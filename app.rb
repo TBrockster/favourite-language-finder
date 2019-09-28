@@ -15,6 +15,7 @@ class FavLangFinderApp < Sinatra::Base
     graphql_queirer = GraphQLQuerier.new
     graphql_queirer.send_graphql_query(params[:username])
     @repos = graphql_queirer.map_response_to_repo
+    @language_by_repos = Repo.favourite_by_repos(@repos)
     erb(:result)
   end
 end

@@ -9,6 +9,18 @@ class Repo
     @dominant_language = calc_dominant_language
   end
 
+  def self.favourite_by_repos(repos)
+    dominant_language = Hash.new(0)
+    repos.each do |repo|
+      dominant_language[repo.dominant_language] += 1
+    end
+    find_highest_value(dominant_language)
+  end
+
+  def self.find_highest_value(hash)
+    hash.each { |k, v| return k if v == hash.values.max }
+  end
+
   private
 
   def calc_dominant_language
