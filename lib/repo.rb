@@ -15,6 +15,7 @@ class Repo
     repos.each do |repo|
       dominant_language[repo.dominant_language] += 1
     end
+    dominant_language['N/A'] = 0
     find_highest_value(dominant_language)
   end
 
