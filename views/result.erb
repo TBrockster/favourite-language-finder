@@ -9,7 +9,7 @@
   </tr>
 <% @repos.each do |repo| %>
   <tr>
-    <td><%= repo.name %></td>
+    <td><a href=<%=repo.url%>><%= repo.name %></a></td>
     <td><%= repo.dominant_language %></td>
   </tr>
 <% end %>

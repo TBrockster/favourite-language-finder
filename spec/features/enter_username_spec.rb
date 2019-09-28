@@ -4,6 +4,7 @@ feature 'Entering User:' do
   scenario "Entering 'TBrockster'" do
     enter_name('TBrockster')
     expect(page).to have_content('Repository Name')
+    expect(page).to have_link("hello-world", :href=>"https://github.com/TBrockster/hello-world")
   end
 
   scenario "Entering ' '" do

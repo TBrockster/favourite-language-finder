@@ -18,7 +18,7 @@ class GraphQLQuerier
       repo.languages.edges.each do |language|
         languages[language.node.name.to_sym] += language.size
       end
-      Repo.new(name: repo.name, languages: languages)
+      Repo.new(name: repo.name, languages: languages, url: repo.url)
     end
   end
 end

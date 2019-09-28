@@ -2,10 +2,11 @@
 
 # This is the Object that contains the information from the GraphQL query.
 class Repo
-  attr_reader :name, :languages, :dominant_language
-  def initialize(name:, languages:)
+  attr_reader :name, :languages, :url, :dominant_language
+  def initialize(name:, languages:, url:)
     @name = name
     @languages = languages
+    @url = url
     @dominant_language = calc_dominant_language
   end
 

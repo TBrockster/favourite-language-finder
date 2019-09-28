@@ -23,6 +23,7 @@ GHLangBreakdown = GHLangFinder::Client.parse <<-'GRAPHQL'
         repositories(first: 100, isFork: false) {
           nodes {
             name
+            url
             languages(first:10) {
                 totalCount
                 edges {
