@@ -27,7 +27,7 @@ I struggled to test the methods that deal with the GraphQL response, and so I am
 I also went back and forth on the decision to map the response to repo objects, which I should have planned more at the beginning.
 
 ## To Do
-
+ - Fix pending tests
  - Check for invalid GitHub usernames
  - Add links to repos
  - Style

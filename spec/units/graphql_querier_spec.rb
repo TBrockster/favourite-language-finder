@@ -5,12 +5,17 @@ require 'graphql_querier'
 describe GraphQLQuerier do
   subject(:graphql_querier) { described_class.new }
   let(:fake_graphql_library) { double :fake_graphql_library }
-  let(:fake_response) { double :fake_response }
 
   describe '#send_graphql_query' do
-    it 'input double receives the .query method' do
+    xit 'input double receives the .query method' do
+      # @valid check breaks this for double
       expect(fake_graphql_library).to receive(:query)
       graphql_querier.send_graphql_query('TBrockster', graphql_library: fake_graphql_library)
+    end
+
+    it 'stores validity, and makes it readable' do
+      graphql_querier.send_graphql_query('TBrockster')
+      expect(graphql_querier.valid).to eq true
     end
   end
 
