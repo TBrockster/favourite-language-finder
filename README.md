@@ -24,13 +24,9 @@ After setting up the basic framework, I decided to add links to the repos, to se
 
 ## Obstacles
 
-I struggled to test the methods that deal with the GraphQL response, and so I am relying on feature tests, using a live API call to my own GitHub profile, which will change as I continue to use it.
+I struggled to test the methods that deal with the GraphQL response, and so I am relying on feature tests, using a live API call to my own GitHub profile, which will change as I continue to use it. This also makes it hard to test for edge cases that I cannot find an example GitHub account for (e.g. an account with two languages with the same total bytes).
 
 I also went back and forth on the decision to map the response to repo objects, which I should have planned more at the beginning.
 
 ## To Do
  - Fix pending tests
-
- - Style
- - ???
- - Submit
