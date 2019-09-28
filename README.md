@@ -28,7 +28,7 @@ I also went back and forth on the decision to map the response to repo objects, 
 
 ## To Do
  - Fix pending tests
- - Check for invalid GitHub usernames
+ 
  - Add links to repos
  - Style
  - ???
