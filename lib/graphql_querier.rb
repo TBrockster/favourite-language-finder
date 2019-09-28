@@ -14,11 +14,16 @@ class GraphQLQuerier
 
   def map_response_to_repo(response = @response)
     response.data.user.repositories.nodes.map do |repo|
-      languages = Hash.new(0)
-      repo.languages.edges.each do |language|
-        languages[language.node.name.to_sym] += language.size
-      end
+      languages = create_language_hash(repo)
       Repo.new(name: repo.name, languages: languages, url: repo.url)
     end
+  end
+
+  def create_language_hash(repo)
+    languages = Hash.new(0)
+    repo.languages.edges.each do |language|
+      languages[language.node.name.to_sym] += language.size
+    end
+    languages
   end
 end
