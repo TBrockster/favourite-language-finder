@@ -2,10 +2,14 @@
 
 ## Installation Instructions
 
- - run the following commands (starting from projects folder)
+ - Run the following commands (starting from projects folder)
    - git clone https://github.com/TBrockster/favourite-language-finder.git
    - cd favourite-language-finder
    - bundle install
+   - touch variables.rb
+ - Generate a personal access token for GitHub, following these instructions  - https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line
+ - Save this access token in a string named GH_ACCESS_TOKEN in the file variables.rb
+ - Run the command
    - rackup
  - visit http://localhost:9292/
  - Then enter a valid GitHub username, and click 'Find Favourite Language!'
